@@ -110,16 +110,60 @@ function arr_op(){
     const numbers = [80, 30, 40, 50, 23]
     numbers[1] = 78
     let arr_len = numbers.length
-    for(let i = 0; i < 4; i++){
-        for(let j = i+1; j < 5; j++){
-            if(numbers[i] > numbers[j])
-                var temp = numbers[i]
-                numbers[i] = numbers[j]
-                numbers[j] = temp
+    for (i = 0; i < arr_len; i++) {
+        let min = numbers[i];
+        let index = i;
+        for (j = i + 1; j < arr_len; j++) {
+            if (numbers[j] < min) {
+                min = numbers[j];
+                index = j;
+            }
         }
+        let temp = numbers[i];
+        numbers[i] = min;
+        numbers[index] = temp;
     }
 
     for(let i = 0; i < 5; i++){
         document.write(numbers[i] + " ")
     }
+}
+
+function arr_op2(){
+    const names = ["sadun", "kamal", "nimal", "ruwan"];
+    const temp = names;
+    const string = temp.join(" ");
+    document.write(string + "</br>");
+    names.pop();
+    for (i = 0; i < names.length; i++) {
+        document.write(names[i] + " ");
+    }
+    document.write("</br>");
+    names.push("nuwani");
+    for (i = 0; i < names.length; i++) {
+        document.write(names[i] + " ");
+    }
+}
+
+function merge_arr(){
+    const myGirls = ["Cecilie", "lone"];
+    const myBoys = ["Emil", "Tobias", "Linus"];
+    const newArray = myGirls;
+
+    for (i = 0; i < myBoys.length; i++) {
+        newArray.push(myBoys[i]);
+    }
+    for (i = 0; i < newArray.length; i++){
+        document.write(newArray[i] + ", ");
+    }
+}
+
+function sum(){
+    const numbersArray = [1, 13, 22, 123, 49];
+    let total = 0;
+    
+    for (i = 0; i < numbersArray.length; i++){
+        total += numbersArray[i];
+    }
+    alert("Sum : " + total);
 }
