@@ -63,7 +63,63 @@ function maxvalfn(){
         }
         else{
             window.alert(val3 + " is the largest value!")
-        console.log(val1, val2, val3)
+            console.log(val1, val2, val3)
         }
+    }
+}
+
+function prime(){
+    let val = prompt("Enter the value")
+    var prime = true
+
+    if(val < 2){
+        prime = false
+    }
+    else if(val != 2){
+        for(let i = 2; i < val; i++){
+            if(val%i == 0){
+                prime = false
+                break
+            }
+        }
+    }
+    if(prime){
+        alert("Prime number")
+    }
+    else{
+        alert("Not a prime number")
+    }
+}
+
+function odd(){
+    for(let i = 1; i < 30; i++){
+        if(i%2==1){
+            document.write(i + " ")
+        }
+    }
+}
+
+function array(){
+    const arr1 = [23, 44, 61, 39, 162]
+    for(let i = 0; i < 5; i++){
+        document.write(arr1[i] + " ")
+    }
+}
+
+function arr_op(){
+    const numbers = [80, 30, 40, 50, 23]
+    numbers[1] = 78
+    let arr_len = numbers.length
+    for(let i = 0; i < 4; i++){
+        for(let j = i+1; j < 5; j++){
+            if(numbers[i] > numbers[j])
+                var temp = numbers[i]
+                numbers[i] = numbers[j]
+                numbers[j] = temp
+        }
+    }
+
+    for(let i = 0; i < 5; i++){
+        document.write(numbers[i] + " ")
     }
 }
