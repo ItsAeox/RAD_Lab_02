@@ -24,7 +24,7 @@ function display(){
 function area(){
     let len = prompt("Enter the length of the rectangle")
     let wid = prompt("Enter the width of the rectangle")
-    document.write("Area of the rectangle is  ", len*hei)
+    document.write("Area of the rectangle is  ", len*wid)
 }
 
 function test(){
